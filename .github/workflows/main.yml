@@ -1,16 +1,21 @@
-name: First Workflow 
-on:
-  push: 
-    branches:
-      - main 
+name: test workflow 
+on: 
+  push:
+    branches: 
       - dev 
+      - main  
 jobs: 
-  examplw-job: 
-    runs-on: ubuntu-latest 
+  example-job:  
+    runs-on: ubuntu-latest  
     steps: 
       - name: print a welcome message 
-        run: echo "welcome to our first github work"
-      - name: checkout repository #b3ml pull llcode mn lrepo 
+        run: echo "welcome to my firdt workflow from youusef taha " 
+      - name: checkout repo 
+        uses: actions/checkout@v5.0.0  
+      - name: list a repo 
+        run: ls -la 
+
+
         uses: actions/checkout@v5.0.0  
       - name: list repo files 
         run: ls -la 
